@@ -16,6 +16,7 @@
 .project
 .metadata
 .pyc
+__pycache__/
 bin/**
 tmp/**
 tmp/**/*

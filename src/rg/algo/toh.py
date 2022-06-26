@@ -1,21 +1,18 @@
-'''
-This module implements the Tower of Hanoi
+"""This module provides a recursive solution to the Tower of Hanoi problem
 
 Created on Jun 26, 2022
-
 @author: Rubens Gomes
-'''
+"""
 
 def toh(fromStack, toStack, spareStack):
-    '''
-    Demonstrates how to solve Tower of Hanoi problem using recursion
+    """Demonstrates how to solve Tower of Hanoi problem using recursion
 
     :param fromStack: array containing the n disks to be moved from
     :param toStack: empty array to where disks should be moved to
     :param spareStack: empty array to keep temporary spare disks during moves
 
     Returns None
-    '''
+    """
 
     assert len(fromStack) != 0, 'fromStack is empty'
     assert len(toStack) == 0, 'toStack should be empty'

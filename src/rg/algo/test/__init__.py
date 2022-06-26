@@ -1,4 +1,4 @@
-"""rg root package
+"""rg.algo.test package to test rg.algo code
 
 Created on Jun 26, 2022
 @author: Rubens Gomes

@@ -1,15 +1,15 @@
-"""algo package
-
-Top root package for Rubens Gomes algorithms code.
+"""rg.algo package that contains algorithms code.
 
 Modules:
 -------
-toh: a module to solve the Tower of Hanoi problem
-fibo: a module to determine fibonacci numbers
+toh: a module that provides a solution to solve the Tower of Hanoi problem
+fibo: a module that provides a Fibonacci calculator abstraction
 
 Sub-Packages:
 ------------
 
+Created on Jun 26, 2022
+@author: Rubens Gomes
 """
 
 __author__ = "Rubens S. Gomes <rubens.s.gomes@gmail.com>"
