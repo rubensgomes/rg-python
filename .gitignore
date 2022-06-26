@@ -15,6 +15,7 @@
 *.pydevproject
 .project
 .metadata
+.pyc
 bin/**
 tmp/**
 tmp/**/*
