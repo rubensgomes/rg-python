@@ -7,7 +7,6 @@ Created on Jun 25, 2022
 @author: Rubens Gomes
 """
 import time
-from pickle import NONE
 
 class FiboCalc(object):
     """A type that provides functionalities to calculate Fibonacci numbers
@@ -23,7 +22,7 @@ class FiboCalc(object):
 
     @staticmethod
     def get_memo():
-        """Returns the value of the class variable _memo containing previously stored fibonacci numbers
+        """Returns the value of the class variable _memo containing previously stored Fibonacci numbers
 
         Keyword arguments:
         :param self: refers to any object instance of this type
@@ -62,8 +61,18 @@ class FiboCalc(object):
     def fibo_dp(self, n):
         """Returns the Fibonacci number for the given index n
         
-        It uses a dynamic programming technique with memorization to optimize the 
-        calculation of Fibonacci number. 
+        It uses a dynamic programming technique with "Memoization" where previously computed
+        Fibonacci numbers are stored in a "memo" data-structure (e.g., dictionary), and therefore,
+        reused computed values optimizes the calculation of subsequent Fibonacci number.
+
+        The Dynamic Programming technique follows the following steps:
+
+        Is "n" found in the memo?
+        If yes, return memo[n]
+        If not, is "n" the base case?
+            If yes, return base case result
+            If not, apply recursive step
+        Store result of f(n) in memo
  
         Keyword arguments:
         :param n -- a positive integer number to represent the index of of the Fibonacci
@@ -72,14 +81,19 @@ class FiboCalc(object):
 
         FiboCalc._check_input(n)
 
+        # Dynamic Programming Technique
+
         if n in FiboCalc._memo: 
+        # Memoization Step
             return FiboCalc._memo[n]
         elif n <= 2:
+        # Base Case
             ans = 1
         else:
+        # Recursive Step
             ans = self.fibo_dp(n - 1) + self.fibo_dp(n - 2)
 
-        # store ans to be used in future Fibonacci calculations (DP - Dynamic Programming)
+        # Store ans in memo to be used in future Fibonacci computation
         FiboCalc._memo[n] = ans
         return ans
 

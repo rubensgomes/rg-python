@@ -4,6 +4,7 @@ Created on Jun 26, 2022
 @author: Rubens Gomes
 """
 
+
 def toh(fromStack, toStack, spareStack):
     """Demonstrates how to solve Tower of Hanoi problem using recursion
 
@@ -24,6 +25,7 @@ def toh(fromStack, toStack, spareStack):
     print ("initial spareStack: ", spareStack)
     print("-------")
 
+    # delegate computation to recursive function
     _toh(len(fromStack), fromStack, toStack, spareStack)
 
     print("-----------------------")
@@ -33,6 +35,7 @@ def toh(fromStack, toStack, spareStack):
     print("-----------------------")
 
     return None
+
 
 def _toh(n, fromStack, toStack, spareStack):
 
