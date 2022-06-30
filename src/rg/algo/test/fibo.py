@@ -1,13 +1,13 @@
-""""Unit test to test the rg.algo obj module code
+'''Unit tests for the rg.algo.fibo module
 
 Created on Jun 26, 2022
 @author: Rubens Gomes
-"""
+'''
 import unittest
 from rg.algo.fibo import FiboCalc
 
 
-class FiboTest(unittest.TestCase):
+class Test(unittest.TestCase):
     """A unit test class to test the FiboCalc functionalities
     """
 
@@ -17,6 +17,9 @@ class FiboTest(unittest.TestCase):
         """
         unittest.TestCase.setUp(self)
         self.obj = FiboCalc()
+
+    def test_fail_fibo_wrong_input_type(self):
+        self.assertRaises(AssertionError, self.obj.fibo, [])
 
     def test_fail_fibo_negative_input(self):
         self.assertRaises(AssertionError, self.obj.fibo, -1)
@@ -31,5 +34,5 @@ class FiboTest(unittest.TestCase):
         self.assertTrue(self.obj.fibo_dp(5) == 5, "fibo_dp of 5 is NOT 5")
 
 if __name__ == "__main__":
-    # import sys;sys.argv = ['', 'FiboTest.failDueToNegativeInput']
+    # import sys;sys.argv = ["", "FiboTest.failDueToNegativeInput"]
     unittest.main()

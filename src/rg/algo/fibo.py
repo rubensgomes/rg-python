@@ -100,10 +100,11 @@ class FiboCalc(object):
     @staticmethod
     def _check_input(n):
         # simple static method to validate method precondition input
-        assert n > 0, 'n must be greater than zero'
+        assert isinstance(n, int), "n must be an integer"
+        assert n > 0, "n must be greater than zero"
         return None
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     NS_TO_MS_FACTOR=0.000001
     # obj is an object used to test the different Fibonacci calculator methods
     obj = FiboCalc()
