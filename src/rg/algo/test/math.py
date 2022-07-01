@@ -37,6 +37,22 @@ class Test(unittest.TestCase):
         for i in primes:
             self.assertFalse(self.obj.isprime(i), f"{i} is prime")
 
+    def test_power_negative(self):
+        self.assertRaises(AssertionError, self.obj.power, 2, -2 )
+
+    def test_power_1(self):
+        pairs = [(0,1),(1,1),(2,1),(3,1),(4,1)]
+        for i in pairs:
+            self.assertTrue(self.obj.power(i[0],i[1])==i[0], f"{i} power failed")
+
+    def test_sqrt_negative(self):
+        self.assertRaises(AssertionError, self.obj.sqrt, -1)
+
+    def test_sqrt_numbers(self):
+        pairs=[(4,2),(1,1),(16,4),(25,5)]
+        for i in pairs:
+            self.assertTrue(self.obj.sqrt(i[0])==i[1], f"{i[1]} is not sqrt of {i[0]}")
+
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testName']
     unittest.main()

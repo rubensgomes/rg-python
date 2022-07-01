@@ -32,6 +32,46 @@ class MathCalc(object):
 
         return True
 
+    def power(self, a, b):
+        """Returns the power of a to b
+        :param a:  an integer number
+        :param b: a positive integer number
+        """
+
+        assert isinstance(a, int), "a must be integer"
+        assert isinstance(b, int), "b must be integer"
+        assert b>0, "b must be positive"
+
+        if b==1: return a
+
+        return a*self.power(a, b-1)
+
+    def sqrt(self, n):
+        """Returns the square root of n using bi-section brute force guesses
+        :param n: a positive integer number
+        """
+
+        assert isinstance(n, int), "n must be integer"
+        assert n>0, "n must be positive"
+
+        return MathCalc._sqrt(n, 1, n)
+
+    @staticmethod
+    def _sqrt(n, low, high):
+        if(n==0): return 0
+        if(n==1): return 1
+
+        if(high<low): raise ValueError(f"cannot determine sqrt of {n}")
+
+        guess = int((high+low)/2)
+        num=guess*guess
+
+        if num==n:
+            return guess
+        elif num>n: 
+            return MathCalc._sqrt(n, low, guess-1)
+        else: 
+            return MathCalc._sqrt(n,guess+1, high)
 
     @staticmethod
     def _check_isprime_input(n):
