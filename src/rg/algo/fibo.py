@@ -60,7 +60,7 @@ class FiboCalc(object):
 
     def fibo_dp(self, n):
         """Returns the Fibonacci number for the given index n
-        
+
         It uses a dynamic programming technique with "Memoization" where previously computed
         Fibonacci numbers are stored in a "memo" data-structure (e.g., dictionary), and therefore,
         reused computed values optimizes the calculation of subsequent Fibonacci number.
@@ -83,17 +83,18 @@ class FiboCalc(object):
 
         # Dynamic Programming Technique
 
-        if n in FiboCalc._memo: 
         # Memoization Step
+        if n in FiboCalc._memo: 
             return FiboCalc._memo[n]
-        elif n <= 2:
-        # Base Case
+
+        if n <= 2:
+            # Base Case
             ans = 1
         else:
-        # Recursive Step
+            # Recursive Step
             ans = self.fibo_dp(n - 1) + self.fibo_dp(n - 2)
 
-        # Store ans in memo to be used in future Fibonacci computation
+        # Store ans in memo to be used in subsequent Fibonacci computation
         FiboCalc._memo[n] = ans
         return ans
 
@@ -106,7 +107,7 @@ class FiboCalc(object):
 
 if __name__ == "__main__":
     NS_TO_MS_FACTOR=0.000001
-    # obj is an object used to test the different Fibonacci calculator methods
+    # obj is an object used to test this type
     obj = FiboCalc()
     # notice that 35 takes 
     N = [5, 10, 20, 30]

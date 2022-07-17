@@ -34,5 +34,4 @@ class Test(unittest.TestCase):
         self.assertTrue(self.obj.fibo_dp(5) == 5, "fibo_dp of 5 is NOT 5")
 
 if __name__ == "__main__":
-    # import sys;sys.argv = ["", "FiboTest.failDueToNegativeInput"]
     unittest.main()
