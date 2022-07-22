@@ -3,7 +3,6 @@
 Created on Jun 26, 2022
 @author: Rubens Gomes
 """
-from array import array
 
 DEBUG=False
 
@@ -67,9 +66,9 @@ class TowerOfHanoi(object):
 
         Returns None
         """
-        assert isinstance(fromStack, array), "fromStack is not an array"
-        assert isinstance(toStack, array), "toStack is not an array"
-        assert isinstance(spareStack, array), "spareStack is not an array"
+        assert isinstance(fromStack, list), "fromStack is not an list"
+        assert isinstance(toStack, list), "toStack is not an list"
+        assert isinstance(spareStack, list), "spareStack is not an list"
 
         assert len(fromStack) != 0, "fromStack is empty"
         assert len(toStack) == 0, "toStack should be empty"

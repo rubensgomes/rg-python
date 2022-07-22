@@ -43,7 +43,7 @@ class TripleStep(object):
         :param n: number of steps in the stairs
         """
         assert isinstance(n, int), "n must be integer"
-    
+
         if n < 0:
             return 0
     

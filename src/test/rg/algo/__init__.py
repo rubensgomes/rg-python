@@ -1,4 +1,4 @@
-"""rg.algo.test package to test rg.algo code
+"""test.rg.algo.package to test corresponding package code
 
 Created on Jun 26, 2022
 @author: Rubens Gomes

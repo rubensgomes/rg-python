@@ -1,5 +1,4 @@
-"""rg.algo package that contains algorithms code.
-
+"""test.rg.algo.algo.cracking.recursion package to test corresponding package code
 
 Created on Jun 26, 2022
 @author: Rubens Gomes
@@ -11,6 +10,3 @@ __license__ = "All Rights Reserved"
 __maintainer__ = "Rubens Gomes"
 __email__ = "rubens.s.gomes@gmail.com"
 __status__ = "Experimental"
-
-if __name__ == '__main__':
-    pass
