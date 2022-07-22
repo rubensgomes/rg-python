@@ -1,4 +1,4 @@
-"""test.rg.algo.algo.cracking.recursion package that contains algorithms code.
+"""rg.algo.algo.cracking.recursion package that contains algorithms code.
 
 
 Created on Jun 26, 2022

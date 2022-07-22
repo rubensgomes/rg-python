@@ -1,6 +1,6 @@
-"""test.rg.algo.algo.cracking.recursion package to test corresponding package code
+"""test.rg.algo.cracking.recursion package to test corresponding package code
 
-Created on Jun 26, 2022
+Created on July 22, 2022
 @author: Rubens Gomes
 """
 
